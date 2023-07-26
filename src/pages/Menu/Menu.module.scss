@@ -1,0 +1,140 @@
+.menu {
+    margin-bottom: 80px;
+}
+
+.menu__layout {
+    padding: 0 75px;
+}
+
+.menu__container {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.menu-filters {
+    width: 18%;
+
+    .menu-filters__title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+        padding: 8px 0 8px 12px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    }
+}
+.menu-filters__foods {
+    margin: 0;
+    padding: 0;
+}
+.menu-filters__item {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    margin: 3px 0;
+    border-radius: 6px;
+    transition: all 0.15s ease-in-out;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.08);
+        color: var(--orange-color);
+    }
+
+    img {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    span {
+        font-size: 1.4rem;
+        text-transform: capitalize;
+        margin-left: 10px;
+    }
+}
+.selected {
+    background-color: rgba(0, 0, 0, 0.08);
+    color: var(--orange-color);
+}
+.menu-filters__price {
+    padding: 0 12px;
+}
+
+.shop-filters__stars {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    padding: 3px 12px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        color: var(--orange-color);
+    }
+    span {
+        margin-left: 4px;
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+}
+
+.rate-selected {
+    svg {
+        fill: var(--orange-color) !important;
+    }
+
+    span {
+        color: var(--orange-color);
+    }
+}
+
+@media (max-width: 600px) {
+    .menu__layout {
+        padding: 0 5px;
+    }
+
+    .menu-filters__item-name {
+        display: none;
+    }
+
+    .menu__container {
+        display: block; // Stack the Grid items vertically on smaller screens
+    }
+
+    .menu-filters {
+        width: 100%; // Take up the full width of the screen on smaller screens
+    }
+
+    .menu-filters__title {
+        text-align: center; // Center align the titles on smaller screens
+    }
+
+    .menu-filters__foods,
+    .menu-filters__price,
+    .menu-filters__price label,
+    .menu-filters__price input,
+    .menu-filters__price button {
+        width: 100%; // Take up the full width of the screen on smaller screens
+    }
+
+    .menu-filters__foods {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; // Center the food categories on smaller screens
+    }
+
+    .menu-filters__item {
+        margin: 5px; // Add some spacing between the food categories
+    }
+
+    .menu-filters__item-name {
+        margin-top: 5px; // Add some spacing between the food category name and the image
+    }
+
+    .shop-filters__stars {
+        display: flex;
+        justify-content: center; // Center the rate filters on smaller screens
+    }
+
+    .menu-filters__flex {
+        display: flex;
+        justify-content: space-between;
+    }
+}

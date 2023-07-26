@@ -1,0 +1,87 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Josefin+Sans:wght@400;500;600;700&family=Sacramento&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --font-family: 'Roboto', sans-serif;
+    --font-Sacramento: 'Sacramento', cursive;
+    --font-Josefin: 'Josefin Sans', sans-serif;
+    --primary: #fbb403;
+    --white: #fff;
+    --text-color: #000000d6;
+    --orange-color: #ff514e;
+
+    --default-layout-header-hight: 65px;
+    --default-layout-width: 1280px;
+    --default-layout-horizontal-spacer: 24px;
+    --default-border-radius: 5px;
+}
+
+html {
+    list-style: 1.2rem;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 1.5rem;
+    // font-weight: 500;
+    text-rendering: optimizeSpeed;
+}
+
+//custom tippy tooltip
+body {
+    .tippy-box {
+        border-radius: 8px;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        background-color: rgba(84, 84, 84, 0.92);
+    }
+
+    .tippy-arrow {
+        color: rgba(84, 84, 84, 0.92);
+    }
+
+    .tippy-content {
+        padding: 4px 10px;
+    }
+}
+
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+}
+
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    // background-color: rgba(22, 24, 35, 0.06);
+    background-color: #909090;
+}
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
